@@ -1,0 +1,77 @@
+@import "tailwindcss";
+* {
+  direction: rtl;
+}
+
+@font-face {
+  font-family: "Allura-Regular";
+  src: url("/fonts/Allura-Regular.ttf") format("woff2"),
+    url("/fonts/Allura-Regular.ttf") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazir";
+  src: url("/fonts/IRANSans-Edit.ttf") format("woff2"),
+    url("/fonts/IranNastaliq_0.ttf") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nazanin";
+  src: url("/fonts/B-NAZANIN.TTF") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazir";
+  src: url("/fonts/IRANSansBold-Edit.ttf") format("woff2"),
+    url("/fonts/IRANSansBold-Edit.ttf") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Baskervville";
+  src: url("/fonts/Baskervville-VariableFont_wght.ttf") format("woff2"),
+    url("/fonts/Baskervville-Italic-VariableFont_wght.ttf") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body {
+  background-color: #f5f5f5b1;
+  font-family: 'Nazanin', sans-serif;
+
+}
+/* styles/globals.css یا فایل CSS کامپوننت */
+.gallery-container {
+  max-width: 1200px;       /* حداکثر عرض گالری */
+  margin: 0 auto;           /* وسط چین کردن */
+  padding: 10px;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;        /* برش زیبا بدون تغییر نسبت */
+  border-radius: 8px;       /* گوشه‌های گرد */
+  transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);   /* افکت هاور زیبا */
+}
+.photo-album img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
