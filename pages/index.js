@@ -7,8 +7,6 @@ import { useEffect, useState } from "react";
 import Gallery from "@/components/gallery";
 import SimpleModal from "@/components/SimpleModal";
 import HeroSection from "@/components/Herosection";
-import ProgressTimeline from "../components/CustomizedTimeline";
-import CustomizedTimeline from "../components/CustomizedTimeline";
 import RoyalInviteCard from "@/components/RSVPModal";
 
 
