@@ -25,7 +25,7 @@ export default function SoftWeddingInvite() {
       const data = await res.json();
 
       if (data.status === "success") {
-        toast.success(ممنون که حضورتون رو اعلام کردید💕");
+        toast.success("ممنون که حضورتون رو اعلام کردید");
         setIsOpen(false);
         setFullName("");
         setAttendance("");
