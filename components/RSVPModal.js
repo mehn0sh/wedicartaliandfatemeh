@@ -19,7 +19,7 @@ export default function SoftWeddingInvite() {
           <div className="card-face absolute w-full h-full bg-gradient-to-br from-pink-100 via-rose-100 to-rose-200 rounded-[40px] shadow-xl flex flex-col items-center justify-center text-rose-700">
 
             <div className="text-center space-y-6 px-10">
-              <h2 className="text-4xl font-playfair tracking-wide drop-shadow-sm text-gray-500">
+              <h2 className="text-3xl font-playfair tracking-wide drop-shadow-sm text-nowrap text-rose-800">
                 دعوت‌نامه مراسم عروسی
               </h2>
 
