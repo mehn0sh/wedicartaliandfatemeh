@@ -1,0 +1,131 @@
+import { useState } from "react";
+
+export default function SoftWeddingInvite() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [attendance, setAttendance] = useState("");
+  const [guestCount, setGuestCount] = useState(1);
+
+  const isComing = attendance === "yes";
+
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-white p-6">
+
+      <div className="perspective w-full max-w-2xl h-[600px] relative">
+
+        <div className={`card-wrapper relative w-full h-full ${isOpen ? "open" : ""}`}>
+
+          {/* جلد کارت */}
+          <div className="card-face absolute w-full h-full bg-gradient-to-br from-pink-200 via-rose-200 to-rose-300 rounded-[40px] shadow-xl flex flex-col items-center justify-center text-white">
+
+            <div className="text-center space-y-6 px-10">
+              <h2 className="text-4xl font-playfair tracking-wide">
+                دعوت‌نامه مراسم عروسی
+              </h2>
+
+              <p className="text-lg opacity-90">
+                با افتخار شما را به جشن آغاز زندگی مشترکمان دعوت می‌کنیم
+              </p>
+
+              <button
+                onClick={() => setIsOpen(true)}
+                className="mt-6 px-8 py-3 bg-white text-rose-400 rounded-full shadow-md hover:scale-105 transition duration-500"
+              >
+                باز کردن دعوت‌نامه
+              </button>
+            </div>
+          </div>
+
+          {/* داخل کارت */}
+          <div className="card-face card-back absolute w-full h-full bg-white rounded-[40px] shadow-xl p-12 overflow-y-auto text-right">
+
+            <h3 className="text-3xl font-playfair text-center text-rose-400 mb-10">
+              فرم اعلام حضور
+            </h3>
+
+            <form className="space-y-8">
+
+              <div className="flex flex-col space-y-2">
+                <label>
+                  میهمان عزیزمان <span className="text-rose-300">*</span>
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="نام و نام خانوادگی"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  className="border-b border-rose-200 focus:border-rose-400 outline-none py-2 transition"
+                />
+              </div>
+
+              <div className="space-y-3">
+                <label>
+                  آیا افتخار پذیرایی از شما خواهیم داشت؟{" "}
+                  <span className="text-rose-300">*</span>
+                </label>
+
+                <label className="flex justify-end gap-3">
+                  <span>در این روز زیبا کنارتان خواهیم بود</span>
+                  <input
+                    type="radio"
+                    name="attendance"
+                    value="yes"
+                    onChange={(e) => setAttendance(e.target.value)}
+                    className="accent-rose-400"
+                  />
+                </label>
+
+                <label className="flex justify-end gap-3">
+                  <span>متاسفانه نمی‌توانیم همراهیتان کنیم</span>
+                  <input
+                    type="radio"
+                    name="attendance"
+                    value="no"
+                    onChange={(e) => setAttendance(e.target.value)}
+                    className="accent-rose-400"
+                  />
+                </label>
+              </div>
+
+              {isComing && (
+                <div className="space-y-4 transition-all duration-500">
+                  <label>تعداد میهمانان</label>
+                  <input
+                    type="range"
+                    min="1"
+                    max="5"
+                    step="1"
+                    value={guestCount}
+                    onChange={(e) => setGuestCount(e.target.value)}
+                    className="w-full accent-rose-400"
+                  />
+                  <div className="text-center text-xl font-playfair text-rose-400">
+                    {guestCount} نفر
+                  </div>
+                </div>
+              )}
+
+              <button
+                type="submit"
+                className="w-full py-4 mt-6 rounded-full bg-gradient-to-r from-rose-300 to-pink-300 text-white shadow-md hover:scale-[1.03] transition duration-500"
+              >
+                ثبت تشریف فرمایی
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setIsOpen(false)}
+                className="w-full mt-4 text-rose-300 hover:text-rose-400 transition"
+              >
+                بستن دعوت‌نامه
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  );
+}

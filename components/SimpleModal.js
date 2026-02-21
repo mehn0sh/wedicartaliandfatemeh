@@ -13,7 +13,7 @@ export default function SimpleModal() {
   return (
     <>
       {/* دکمه باز کردن */}
-      <div className="flex justify-center flex-col mt-3 items-center m-auto max-w-xl mx-auto p-4 ">
+      <div className="flex justify-center flex-col my-12 items-center m-auto max-w-xl mx-auto p-4 ">
         <img src="/img/flower2.png" className="w-[180px] md:w-[240px] " />
         <div className=" gap-2.5 flex flex-col items-center w-full p-3 mt-5 border-double border-4 border-gray-300 rounded-md shadow-md ">
           <MdOutlineDateRange className="text-2xl  text-blue-300" />

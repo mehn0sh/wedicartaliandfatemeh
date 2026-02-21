@@ -9,6 +9,7 @@ import SimpleModal from "@/components/SimpleModal";
 import HeroSection from "@/components/Herosection";
 import ProgressTimeline from "../components/CustomizedTimeline";
 import CustomizedTimeline from "../components/CustomizedTimeline";
+import RoyalInviteCard from "@/components/RSVPModal";
 
 
 /* ================= Utils ================= */
@@ -145,6 +146,7 @@ export default function Home() {
           />
         </motion.div>
       </motion.section>
+<RoyalInviteCard/>
     </div>
   );
 }
