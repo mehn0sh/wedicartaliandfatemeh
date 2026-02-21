@@ -7,7 +7,21 @@ export default function SoftWeddingInvite() {
   const [guestCount, setGuestCount] = useState(1);
 
   const isComing = attendance === "yes";
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
+  await fetch("https://script.google.com/macros/s/AKfycby_ZHhOB-9Ih5ENjmueMoL-m6TnOFHKWEmUKS5b6Ru15BueCArGgiBpmdrFl3OoLvk/exec", {
+    method: "POST",
+    body: JSON.stringify({
+      full_name: fullName,
+      attendance: attendance,
+      guest_count: attendance === "yes" ? guestCount : 0,
+    }),
+  });
+
+  alert("ثبت شد 💕");
+  setIsOpen(false);
+};
   return (
     <div className="invite-card flex items-center justify-center min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-white p-6">
 
@@ -61,7 +75,7 @@ export default function SoftWeddingInvite() {
 
               <div className="space-y-3">
                 <label>
-                  آیا افتخار پذیرایی از شما خواهیم داشت؟{" "}
+                  آیا افتخار پذیرایی از شمارا خواهیم داشت؟{" "}
                   <span className="text-rose-400">*</span>
                 </label>
 
@@ -107,6 +121,7 @@ export default function SoftWeddingInvite() {
               )}
 
               <button
+              onClick={()=>handleSubmit(e)}
                 type="submit"
                 className="w-full py-4 mt-6 rounded-full bg-gradient-to-r from-rose-300 to-pink-300 text-white shadow-md hover:scale-[1.03] transition duration-500"
               >
