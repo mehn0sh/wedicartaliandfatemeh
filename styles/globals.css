@@ -95,3 +95,6 @@ body {
 .card-back {
   transform: rotateY(180deg);
 }
+.invite-card * {
+  cursor: pointer;
+}

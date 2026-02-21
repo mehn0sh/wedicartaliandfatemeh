@@ -12,7 +12,7 @@ const events = [
 
 export default function WeddingTimeline() {
   return (
-    <div className="max-w-3xl mx-auto py-10 px-4 ">
+    <div className="max-w-3xl mx-auto py-1 px-4 ">
       <h2 className="text-4xl font-bold text-center mb-2">Wedding Timeline</h2>
       <h3 className="text-xl text-center text-gray-600 mb-10">Ali & Fatemeh</h3>
 
