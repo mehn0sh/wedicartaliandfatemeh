@@ -87,7 +87,7 @@ export default function SoftWeddingInvite() {
 
               <div className="space-y-3 text-rose-600">
                 <label>
-                  آیا افتخار پذیرایی از شما خواهیم داشت؟{" "}
+                  آیا افتخار پذیرایی از شما را خواهیم داشت؟{" "}
                   <span className="text-rose-400">*</span>
                 </label>
                 <label className="flex justify-end gap-3">
